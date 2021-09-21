@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "iot-monitoring-app"
+    }
+  },
+  "defaultProject": "iot-monitoring-app",
+  "cli": {
+    "analytics": false
+  }
 }

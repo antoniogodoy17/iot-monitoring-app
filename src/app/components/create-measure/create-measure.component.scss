@@ -1,0 +1,46 @@
+.measure-form {
+  padding: 1rem;
+  background-color: #34495e;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+    .field {
+      box-sizing: border-box;
+      flex:  1 1 auto;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 5px;
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    align-self: flex-end;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border: none;
+    background-color: #95a5a6;
+    color: white;
+    cursor: pointer;
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div class="measure-form">
+  <form [formGroup]="measureForm">
+    <select class="field" formControlName="nodeId" name="nodes" id="nodes">
+      <option [value]="null" disabled>Select a node</option>
+      <option *ngFor="let node of nodes" [value]="node._id">{{ node.name }}</option>
+    </select>
+
+    <select class="field" formControlName="parameterId" name="parameters" id="parameters">
+      <option [value]="null" disabled>Select a Parameter</option>
+      <option *ngFor="let param of parameters" [value]="param._id">{{ param.name }}</option>
+    </select>
+
+    <input class="field" formControlName="value" type="number" placeholder="Enter a numeric value">
+  </form>
+
+  <button (click)="createMeasurement()" [disabled]="measureForm.invalid">Create Measurement</button>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <button (click)="logOut()" class="logout">Log Out</button>
+
+  <app-create-measure (measureCreated)="addMeasurement($event)"></app-create-measure>
+
+  <div *ngFor="let m of measurements" class="measurement">
+    <div class="header">
+      <div class="title">
+        <p class="name">{{ nodes[m.nodeId]?.name | uppercase }}</p>
+        <p class="zone">[{{ nodes[m.nodeId]?.zone | titlecase }}]</p>
+      </div>
+      <p class="timestamp">{{ m.sensedTime | date: 'medium' }}</p>
+    </div>
+    <div class="body">
+      <p class="parameter">{{ parameters[m.parameterId] }}</p>
+      <p class="value">{{ m.value }}</p>
+    </div>
+  </div>
+</div>

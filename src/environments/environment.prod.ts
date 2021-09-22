@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  APIURL: 'http://localhost:5000'
+  APIURL: 'http://jose.pjdtest.com/api'
 };

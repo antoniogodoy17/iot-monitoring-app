@@ -15,11 +15,13 @@ COPY . .
 
 # Generate the build of the application
 RUN npm run build -- --configuration=production
+# --base-href /app --deploy-url /app/
 
 ### STAGE 2: Setup NGINX ###
 
 # Use official nginx image as the base image
 FROM nginx:latest as nginx
+
 COPY ./nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy the build output to replace the default nginx contents.
